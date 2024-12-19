@@ -11,12 +11,12 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="shortcut icon" href="images/favicon.png" type="">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png')}}" type="">
 
     <title> Peminjaman Buku </title>
 
     <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css')}}" />
 
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -26,12 +26,12 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
     <!-- font awesome style -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="{{ asset('css/font-awesome.min.css')}}" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="{{ asset('css/style.css')}}" rel="stylesheet" />
     <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="{{ asset('css/responsive.css')}}" rel="stylesheet" />
 
 </head>
 
@@ -41,7 +41,7 @@
 
         <div class="hero_bg_box">
             <div class="bg_img_box">
-                <img src="images/hero-bg.png" alt="">
+                <img src="{{ asset('images/hero-bg.png')}}" alt="">
             </div>
         </div>
 
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="images/slider-img.png" alt="">
+                                        <img src="{{ asset('images/slider-img.png')}}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="images/slider-img.png" alt="">
+                                        <img src="{{ asset('images/slider-img.png')}}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +163,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="images/slider-img.png" alt="">
+                                        <img src="{{ asset('images/slider-img.png')}}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -200,7 +200,7 @@
                     <div class="col-md-4 ">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="images/s1.png" alt="">
+                                <img src="{{ asset('images/s1.png')}}" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
@@ -221,7 +221,7 @@
                     <div class="col-md-4 ">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="images/s2.png" alt="">
+                                <img src="{{ asset('images/s2.png')}}" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
@@ -243,7 +243,7 @@
                     <div class="col-md-4 ">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="images/s3.png" alt="">
+                                <img src="{{ asset('images/s3.png')}}" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
@@ -446,18 +446,18 @@
     <!-- footer section -->
 
     <!-- jQery -->
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>
     <!-- popper js -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.js')}}"></script>
     <!-- owl slider -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
     </script>
     <!-- custom js -->
-    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="{{ asset('js/custom.js')}}"></script>
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
     </script>
