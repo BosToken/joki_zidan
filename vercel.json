@@ -1,21 +1,40 @@
 {
-    "version": 2,
-    "framework": null,
-    "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.5.4" }
+    "version" : 2,
+    "functions" : {
+        "api/index.php":{
+            "runtime": "vercel-php@0.6.0"
+        }
     },
-    "routes": [
-        { "src": "/api/index.php", "use": "vercel-php@0.5.2" },
-        { "src": "/public/**", "use": "@vercel/static" }
+    "routes" : [
+        {
+            "src": "/img/(.*)",
+            "dest": "/public/img/"
+        },
+        {
+            "src": "/css/(.*)",
+            "dest": "/public/css/"
+        },
+        {
+            "src": "/fonts/(.*)",
+            "dest": "/public/fonts/"
+        },
+        {
+            "src": "/images/(.*)",
+            "dest": "/public/images/"
+        },
+        {
+            "src": "/js/(.*)",
+            "dest": "/public/js/"
+        },
+        {
+            "src": "/vendor/(.*)",
+            "dest": "/public/vendor/"
+        }
     ],
-    "public": true,
-    "buildCommand": "vite build",
-    "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_URL": "https://peminjamanbuku.vercel.app",
-        "APP_KEY": "base64:Bc0NQOKszdaxbD9lczGOGHtaSbStZKHR7IFq/MacEPQ=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -24,11 +43,7 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie",
-        "DB_CONNECTION": "mysql",
-        "DB_HOST": "rgk2l.h.filess.io",
-        "DB_PORT": "3307",
-        "DB_DATABASE": "peminjamanBuku_airplaneas",
-        "DB_USERNAME": "peminjamanBuku_airplaneas"
-    }
+        "SESSION_DRIVER": "cookie"
+    },
+    "outputDirectory": "public"
 }
