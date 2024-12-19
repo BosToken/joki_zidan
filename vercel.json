@@ -1,18 +1,12 @@
 {
     "version": 2,
-    "builds": [
-        { "src": "/api/index.php", "use": "vercel-php@0.5.4" },
+    "framework": null,
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.5.4" }
+    },
+    "routes": [
+        { "src": "/api/index.php", "use": "vercel-php@0.5.2" },
         { "src": "/public/**", "use": "@vercel/static" }
-    ],
-    "roads": [
-        {
-            "src": "/(css|js)/(.*)",
-            "dest": "public/$1/$2"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
     ],
     "public": true,
     "buildCommand": "vite build",
@@ -37,5 +31,4 @@
         "DB_DATABASE": "peminjamanBuku_airplaneas",
         "DB_USERNAME": "peminjamanBuku_airplaneas"
     }
-
 }
