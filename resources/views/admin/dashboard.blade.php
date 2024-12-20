@@ -45,8 +45,6 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
                     <!-- Content Row -->
@@ -60,7 +58,8 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Student</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$data['student']}}</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $data['student'] }}
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -78,7 +77,8 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Book</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$data['book']}}</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $data['book'] }}
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -95,7 +95,8 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                                 Borrowed Process</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$data['borrow']}}</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $data['borrow'] }}
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-list fa-2x text-gray-300"></i>
@@ -113,12 +114,28 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Returned</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$data['return']}}</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $data['return'] }}
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-check fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <center>
+                                        <img src="images/profile.jpg" width="500" height="500">
+                                        <p class="card-text"><b>Nama</b> : Muhammad Zidan Rakhi Ismed</p>
+                                        <p class="card-text"><b>Kelas</b> : SI502</p>
+                                        <p class="card-text"><b>Matakuliah</b> : Pemprograman Berbasis Web</p>
+                                    </center>
                                 </div>
                             </div>
                         </div>
