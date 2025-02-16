@@ -45,6 +45,7 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">List Buku</h1>
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-body">
@@ -70,8 +71,10 @@
                                                 <td>{{ $book->stock }}</td>
                                                 <td>
                                                     @if ($book->stock > 0)
-                                                        <a href="{{ route('borrow', ['id' => $book->id]) }}"
-                                                            class="btn btn-primary btn-icon-split">
+                                                        <a class="btn btn-primary btn-icon-split btn-pinjam"
+                                                            href="#" data-toggle="modal"
+                                                            data-target="#confirmation" data-name="{{ $book->name }}"
+                                                            data-id="{{ $book->id }}">
                                                             <span class="text">Pinjam Buku</span>
                                                         </a>
                                                     @endif
@@ -82,8 +85,8 @@
                                 </table>
                             </div>
                         </div>
-
                     </div>
+
                     <a href="{{ route('dasbor') }}" class="btn btn-danger btn-icon-split">
                         <span class="text">Back</span>
                     </a>
@@ -114,7 +117,28 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- Modal Peminjaman -->
+    <div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Perhatian</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Peminjaman buku perlu dikonfirmasi terlebih dahulu oleh admin, yakin meminjam buku <strong
+                        id="bookName"></strong>?
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batalkan</button>
+                    <a class="btn btn-success" id="confirmBorrow" href="#">Setuju</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -132,6 +156,22 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+
+    <!-- JavaScript untuk modal -->
+    <script>
+        $(document).ready(function() {
+            $(".btn-pinjam").click(function() {
+                let bookName = $(this).data("name");
+                let bookId = $(this).data("id");
+
+                // Update teks modal
+                $("#bookName").text(bookName);
+
+                // Update link peminjaman
+                $("#confirmBorrow").attr("href", `/borrow/${bookId}`);
+            });
+        });
+    </script>
 
 </body>
 

@@ -62,27 +62,30 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($datas as $data)
-                                            <tr>
-                                                <td>{{ $data->books[0]->name }}</td>
-                                                <td>{{ $data->books[0]->category }}</td>
-                                                <td>{{ $data->books[0]->publisher }}</td>
-                                                <td>{{ $data->books[0]->publication_year }}</td>
-                                                <td>{{ $data->status }}</td>
-                                                <td>
-                                                    @if ($data->status == 'Dipinjam')
-                                                        <a href="{{ route('return-borrow', ['id' => $data->id]) }}"
-                                                            class="btn btn-warning btn-icon-split">
-                                                            <span class="text">Kembalikan</span>
-                                                        </a>
-                                                    @endif
-                                                    @if ($data->status == 'Pengajuan')
-                                                        <a href="{{ route('cancel-borrow', ['id' => $data->id]) }}"
-                                                            class="btn btn-danger btn-icon-split">
-                                                            <span class="text">Batalkan</span>
-                                                        </a>
-                                                    @endif
-                                                </td>
-                                            </tr>
+                                            @if ($data->status !== 'Dikembalikan')
+                                                <tr>
+                                                    <td>{{ $data->books[0]->name }}</td>
+                                                    <td>{{ $data->books[0]->category }}</td>
+                                                    <td>{{ $data->books[0]->publisher }}</td>
+                                                    <td>{{ $data->books[0]->publication_year }}</td>
+                                                    <td>{{ $data->status }}</td>
+                                                    <td>
+                                                        @if ($data->status == 'Dipinjam')
+                                                            <a class="btn btn-warning btn-icon-split btn-kembalikan"
+                                                                href="#" data-toggle="modal"
+                                                                data-target="#kembalikan" data-id="{{ $data->id }}">
+                                                                <span class="text">Kembalikan</span>
+                                                            </a>
+                                                        @endif
+                                                        @if ($data->status == 'Pengajuan')
+                                                            <a href="{{ route('cancel-borrow', ['id' => $data->id]) }}"
+                                                                class="btn btn-danger btn-icon-split">
+                                                                <span class="text">Batalkan</span>
+                                                            </a>
+                                                        @endif
+                                                    </td>
+                                                </tr>
+                                            @endif
                                         @endforeach
                                     </tbody>
                                 </table>
@@ -90,7 +93,7 @@
                         </div>
 
                     </div>
-                    <a href="{{route('dasbor')}}" class="btn btn-danger btn-icon-split">
+                    <a href="{{ route('dasbor') }}" class="btn btn-danger btn-icon-split">
                         <span class="text">Back</span>
                     </a>
 
@@ -121,7 +124,27 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- Modal Peminjaman -->
+    <div class="modal fade" id="kembalikan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Perhatian</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Yakin akan mengembalikan buku ini?
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batalkan</button>
+                    <a class="btn btn-success" id="confirmBorrow" href="#">Setuju</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -139,6 +162,15 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".btn-kembalikan").click(function() {
+                let bookId = $(this).data("id");
+                $("#confirmBorrow").attr("href", `/return-borrow/${bookId}`);
+            });
+        });
+    </script>
 
 </body>
 

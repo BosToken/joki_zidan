@@ -103,7 +103,6 @@ class AdminController extends Controller
     public function rent_confirmation(RentAction $rentAction, BookAction $bookAction, $id){
         $data = $rentAction->getById($id);
         $book = $bookAction->getById($data['book_id']);
-        $bookAction->updateStock(($book['stock'] - 1), $data['book_id']);
         $rentAction->update('Dipinjam', $id);
         return redirect()->route('rent-book');
     }

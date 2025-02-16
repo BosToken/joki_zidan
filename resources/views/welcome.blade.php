@@ -11,12 +11,12 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png')}}" type="">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="">
 
     <title> Peminjaman Buku </title>
 
     <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
 
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -26,12 +26,12 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
     <!-- font awesome style -->
-    <link href="{{ asset('css/font-awesome.min.css')}}" rel="stylesheet" />
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('css/style.css')}}" rel="stylesheet" />
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
-    <link href="{{ asset('css/responsive.css')}}" rel="stylesheet" />
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
 
 </head>
 
@@ -41,7 +41,7 @@
 
         <div class="hero_bg_box">
             <div class="bg_img_box">
-                <img src="{{ asset('images/hero-bg.png')}}" alt="">
+                <img src="{{ asset('images/hero-bg.png') }}" alt="">
             </div>
         </div>
 
@@ -95,16 +95,11 @@
                                             seperti perpustakaan atau tempat penyewaan buku, untuk digunakan dalam
                                             jangka waktu tertentu.
                                         </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Read More
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="{{ asset('images/slider-img.png')}}" alt="">
+                                        <img src="{{ asset('images/slider-img.png') }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -125,16 +120,11 @@
                                             layanan peminjaman. Tujuannya adalah memastikan buku-buku dapat diakses
                                             dengan mudah, terawat dengan baik, dan digunakan secara efisien.
                                         </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Read More
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="{{ asset('images/slider-img.png')}}" alt="">
+                                        <img src="{{ asset('images/slider-img.png') }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -154,16 +144,11 @@
                                             informasi, terutama buku, tetapi juga dokumen, jurnal, media elektronik, dan
                                             materi lainnya.
                                         </p>
-                                        <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Read More
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="{{ asset('images/slider-img.png')}}" alt="">
+                                        <img src="{{ asset('images/slider-img.png') }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -189,18 +174,14 @@
             <div class="container ">
                 <div class="heading_container heading_center">
                     <h2>
-                        Our <span>Services</span>
+                        Fitur <span>Kami</span>
                     </h2>
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                        alteration
-                    </p>
                 </div>
                 <div class="row">
                     <div class="col-md-4 ">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/s1.png')}}" alt="">
+                                <img src="{{ asset('images/s1.png') }}" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
@@ -212,16 +193,13 @@
                                     seperti perpustakaan atau tempat penyewaan buku, untuk digunakan dalam
                                     jangka waktu tertentu.
                                 </p>
-                                <a href="">
-                                    Read More
-                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 ">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/s2.png')}}" alt="">
+                                <img src="{{ asset('images/s2.png') }}" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
@@ -234,16 +212,13 @@
                                     layanan peminjaman. Tujuannya adalah memastikan buku-buku dapat diakses
                                     dengan mudah, terawat dengan baik, dan digunakan secara efisien.
                                 </p>
-                                <a href="">
-                                    Read More
-                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 ">
                         <div class="box ">
                             <div class="img-box">
-                                <img src="{{ asset('images/s3.png')}}" alt="">
+                                <img src="{{ asset('images/s3.png') }}" alt="">
                             </div>
                             <div class="detail-box">
                                 <h5>
@@ -255,17 +230,9 @@
                                     informasi, terutama buku, tetapi juga dokumen, jurnal, media elektronik, dan
                                     materi lainnya.
                                 </p>
-                                <a href="">
-                                    Read More
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="btn-box">
-                    <a href="">
-                        View All
-                    </a>
                 </div>
             </div>
         </div>
@@ -273,67 +240,6 @@
 
     <!-- end service section -->
 
-    <!-- client section -->
-
-    <section class="client_section layout_padding">
-        <div class="container">
-            <div class="heading_container heading_center psudo_white_primary mb_45">
-                <h2>
-                    What says our <span>Customers</span>
-                </h2>
-            </div>
-            <div class="carousel-wrap ">
-                <div class="owl-carousel client_owl-carousel">
-                    <div class="item">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="https://avatars.githubusercontent.com/u/46486733?v=4" alt="" class="box-img">
-                            </div>
-                            <div class="detail-box">
-                                <div class="client_id">
-                                    <div class="client_info">
-                                        <h6>
-                                            BosToken
-                                        </h6>
-                                        <p>
-                                            CS Pro Peleryer
-                                        </p>
-                                    </div>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <p>
-                                    Website keren, aku pinjem buku disini tapi gk tk kembaliin. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="https://avatars.githubusercontent.com/u/144480939?v=4" alt="" class="box-img">
-                            </div>
-                            <div class="detail-box">
-                                <div class="client_id">
-                                    <div class="client_info">
-                                        <h6>
-                                            TheNueee
-                                        </h6>
-                                        <p>
-                                            Rizky Nue
-                                        </p>
-                                    </div>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <p>
-                                    Keren Bingittsssss, Aku sampai merinding. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end client section -->
 
 
     <!-- info section -->
@@ -446,18 +352,18 @@
     <!-- footer section -->
 
     <!-- jQery -->
-    <script type="text/javascript" src="{{ asset('js/jquery-3.4.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <!-- popper js -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="{{ asset('js/bootstrap.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
     <!-- owl slider -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
     </script>
     <!-- custom js -->
-    <script type="text/javascript" src="{{ asset('js/custom.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
     </script>

@@ -130,12 +130,10 @@
                         <div class="col-xl-12 col-md-12 mb-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <center>
-                                        <img src="images/profile.jpg" width="500" height="500">
-                                        <p class="card-text"><b>Nama</b> : Muhammad Zidan Rakhi Ismed</p>
-                                        <p class="card-text"><b>Kelas</b> : SI502</p>
-                                        <p class="card-text"><b>Matakuliah</b> : Pemprograman Berbasis Web</p>
-                                    </center>
+                                    <img src="images/profile.jpg" width="250" height="250">
+                                    <p class="card-text"><b>Nama</b> : Muhammad Zidan Rakhi Ismed</p>
+                                    <p class="card-text"><b>Kelas</b> : SI502</p>
+                                    <p class="card-text"><b>Matakuliah</b> : Pemprograman Berbasis Web</p>
                                 </div>
                             </div>
                         </div>
